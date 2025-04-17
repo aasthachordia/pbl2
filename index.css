@@ -1,0 +1,80 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 47% 0.5%; /* Even darker background */
+    --foreground: 210 40% 98%;
+
+    --card: 225 47% 2%; /* Even darker card */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 225 47% 2%; /* Even darker popover */
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 252 95% 65%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 225 47% 5%; /* Even darker secondary */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 225 47% 5%; /* Even darker muted */
+    --muted-foreground: 215 20% 70%;
+
+    --accent: 194 95% 45%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 225 47% 7%; /* Even darker border */
+    --input: 225 47% 7%; /* Even darker input */
+    --ring: 252 95% 65%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 225 47% 1%; /* Even darker sidebar */
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 252 95% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 225 47% 5%; /* Even darker sidebar accent */
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 225 47% 7%; /* Even darker sidebar border */
+    --sidebar-ring: 252 95% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 0), /* More subtle gradient */
+      radial-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 0); /* More subtle gradient */
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-background/20 backdrop-blur-lg border border-white/5 shadow-md; /* More transparent background */
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  
+  .text-glow-blue {
+    text-shadow: 0 0 10px rgba(14, 165, 233, 0.5), 0 0 20px rgba(14, 165, 233, 0.3);
+  }
+  
+  .text-glow-green {
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5), 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+}
